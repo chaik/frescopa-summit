@@ -1,6 +1,10 @@
+.hero-container {
+  margin-top: 24px;
+}
+
 .hero-container .hero-wrapper {
   max-width: unset;
-  padding: 0;
+  padding: 0 24px;
 }
 
 .hero {
@@ -92,6 +96,10 @@
 }
 
 @media (width >= 900px) {
+  .hero-container .hero-wrapper {
+    padding: 0 32px;
+  }
+
   .hero {
     min-height: 480px;
     padding: 40px 32px;

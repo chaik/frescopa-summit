@@ -1,3 +1,8 @@
+.banner-container .banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
 .banner {
   display: flex;
   align-items: center;

@@ -1,3 +1,8 @@
+.coffee-tasting-container .coffee-tasting-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
 .coffee-tasting {
   display: flex;
   border-radius: 8px;

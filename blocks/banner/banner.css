@@ -5,35 +5,39 @@
 
 .banner {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   background-color: var(--color-cream);
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 32px;
   position: relative;
-  min-height: 200px;
 }
 
 .banner .banner-image {
-  flex: 0 0 200px;
-  max-width: 200px;
-  padding: 16px;
+  flex: 0 0 auto;
+  width: 270px;
+  overflow: hidden;
 }
 
-.banner .banner-image img {
+.banner .banner-image img,
+.banner .banner-image picture {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .banner .banner-content {
   flex: 1;
   padding: 24px 32px;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .banner .banner-content h2 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: georgia, 'Times New Roman', times, serif;
   font-size: 24px;
   font-weight: 400;
   color: var(--color-brown);
@@ -42,10 +46,10 @@
 }
 
 .banner .banner-content p {
-  font-size: 14px;
-  color: #555;
-  margin: 0 0 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  color: #4a3f35;
+  margin: 0 0 18px;
+  line-height: 1.55;
 }
 
 .banner .banner-content .button-wrapper {
@@ -68,13 +72,13 @@
 }
 
 .banner .banner-accent {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 100%;
-  background: radial-gradient(circle at 70% 50%, var(--color-teal) 0%, transparent 70%);
-  opacity: 0.3;
+  flex: 0 0 200px;
+  background:
+    radial-gradient(circle at 70% 60%, #e8c97a 0%, #e8c97a 18%, transparent 18%),
+    radial-gradient(circle at 30% 30%, #e8c97a 0%, #e8c97a 12%, transparent 12%),
+    radial-gradient(circle at 80% 20%, #e8c97a 0%, #e8c97a 8%, transparent 8%),
+    radial-gradient(circle at 50% 80%, #e8c97a 0%, #e8c97a 10%, transparent 10%),
+    var(--color-cream);
 }
 
 @media (width <= 599px) {
@@ -83,7 +87,11 @@
   }
 
   .banner .banner-image {
-    flex: none;
-    max-width: 100%;
+    width: 100%;
+    height: 200px;
+  }
+
+  .banner .banner-accent {
+    display: none;
   }
 }

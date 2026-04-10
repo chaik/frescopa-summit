@@ -1,5 +1,5 @@
 .hero-container {
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .hero-container .hero-wrapper {
@@ -9,8 +9,7 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 400px;
+  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,13 +96,15 @@
 
 @media (width >= 900px) {
   .hero {
-    min-height: 480px;
-    padding: 40px 32px;
     margin: 0 32px 60px;
   }
 }
 
 @media (width <= 599px) {
+  .hero {
+    height: 360px;
+  }
+
   .hero h1,
   .hero h2,
   .hero h3 {

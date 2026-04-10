@@ -1,0 +1,353 @@
+.coffee-tasting {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.coffee-tasting .coffee-tasting-panel {
+  flex: 0 0 46%;
+  background-color: var(--color-burnt-orange);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coffee-tasting .coffee-tasting-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+
+.coffee-tasting .coffee-tasting-label {
+  font-family: var(--ui-font-family);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.96px;
+  margin: 0 0 10px;
+  line-height: 28px;
+}
+
+.coffee-tasting .coffee-tasting-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coffee-tasting .coffee-tasting-input {
+  flex: 1;
+  padding: 8px 16px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  font-family: var(--ui-font-family);
+  font-size: 13px;
+  outline: none;
+}
+
+.coffee-tasting .coffee-tasting-input::placeholder {
+  color: rgb(255 255 255 / 60%);
+}
+
+.coffee-tasting .coffee-tasting-input:focus {
+  border-color: #fff;
+}
+
+.coffee-tasting .coffee-tasting-search-btn {
+  padding: 8px 20px;
+  background-color: var(--color-brown);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: var(--ui-font-family);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.coffee-tasting .coffee-tasting-search-btn:hover {
+  background-color: #2a1e14;
+}
+
+.coffee-tasting .coffee-tasting-search-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.coffee-tasting .coffee-tasting-map {
+  flex: 1;
+  background-color: var(--color-map-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.coffee-tasting .coffee-tasting-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coffee-tasting .coffee-tasting-map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #999;
+}
+
+.coffee-tasting .coffee-tasting-map-placeholder svg {
+  opacity: 0.5;
+}
+
+/* Modal overlay */
+.coffee-tasting-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.coffee-tasting-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 560px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 20%);
+}
+
+.coffee-tasting-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  line-height: 1;
+  padding: 0;
+}
+
+.coffee-tasting-modal-close:hover {
+  background: #f5f5f5;
+}
+
+.coffee-tasting-modal-title {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 4px;
+}
+
+.coffee-tasting-modal-subtitle {
+  font-family: var(--ui-font-family);
+  font-size: 14px;
+  color: #888;
+  margin: 0 0 24px;
+}
+
+.coffee-tasting-results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.coffee-tasting-location-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.coffee-tasting-location-card:hover {
+  border-color: #ccc;
+}
+
+.coffee-tasting-location-card.selected {
+  border-color: var(--color-burnt-orange);
+  box-shadow: 0 0 0 1px var(--color-burnt-orange);
+}
+
+.coffee-tasting-location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.coffee-tasting-location-name {
+  font-family: var(--ui-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.coffee-tasting-location-distance {
+  font-family: var(--ui-font-family);
+  font-size: 13px;
+  color: #999;
+}
+
+.coffee-tasting-location-address {
+  font-family: var(--ui-font-family);
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 12px;
+}
+
+.coffee-tasting-time-slots {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.coffee-tasting-time-btn {
+  padding: 6px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #fff;
+  font-family: var(--ui-font-family);
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.coffee-tasting-time-btn:hover {
+  border-color: #bbb;
+  background: #f9f9f9;
+}
+
+.coffee-tasting-time-btn.selected {
+  border-color: var(--color-burnt-orange);
+  background: var(--color-burnt-orange);
+  color: #fff;
+}
+
+.coffee-tasting-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.coffee-tasting-confirm-btn {
+  padding: 12px 32px;
+  background-color: var(--color-burnt-orange);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: var(--ui-font-family);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.coffee-tasting-confirm-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.coffee-tasting-confirm-btn:not(:disabled):hover {
+  background-color: var(--color-red);
+}
+
+/* Confirmation view */
+.coffee-tasting-confirm-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  color: #4caf50;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.coffee-tasting-confirm-title {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 16px;
+  color: #1a1a1a;
+}
+
+.coffee-tasting-confirm-details {
+  text-align: center;
+  font-family: var(--ui-font-family);
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.coffee-tasting-confirm-details p {
+  margin: 4px 0;
+}
+
+.coffee-tasting-done-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 40px;
+  background: var(--color-brown);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: var(--ui-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.coffee-tasting-done-btn:hover {
+  background: #2a1e14;
+}
+
+/* Responsive */
+@media (width <= 599px) {
+  .coffee-tasting {
+    flex-direction: column;
+  }
+
+  .coffee-tasting .coffee-tasting-panel {
+    flex: none;
+  }
+
+  .coffee-tasting .coffee-tasting-map {
+    min-height: 200px;
+  }
+
+  .coffee-tasting-modal {
+    padding: 24px;
+    margin: 16px;
+  }
+}

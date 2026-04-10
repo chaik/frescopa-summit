@@ -1,0 +1,84 @@
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-cream);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  position: relative;
+  min-height: 200px;
+}
+
+.banner .banner-image {
+  flex: 0 0 200px;
+  max-width: 200px;
+  padding: 16px;
+}
+
+.banner .banner-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.banner .banner-content {
+  flex: 1;
+  padding: 24px 32px;
+  z-index: 1;
+}
+
+.banner .banner-content h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-brown);
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.banner .banner-content p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+.banner .banner-content .button-wrapper {
+  margin: 0;
+}
+
+.banner .banner-content a.button {
+  background-color: var(--color-burnt-orange);
+  border-color: var(--color-burnt-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 24px;
+  border-radius: 100px;
+}
+
+.banner .banner-content a.button:hover {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.banner .banner-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: radial-gradient(circle at 70% 50%, var(--color-teal) 0%, transparent 70%);
+  opacity: 0.3;
+}
+
+@media (width <= 599px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner .banner-image {
+    flex: none;
+    max-width: 100%;
+  }
+}

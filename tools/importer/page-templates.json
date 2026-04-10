@@ -1,0 +1,12 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://publish-p45403-e1547974.adobeaemcloud.com/us/en.html"
+      ],
+      "description": "Main homepage template with hero, product showcases, coffee tasting booking, and brand content",
+      "blocks": []
+    }
+  ]
+}

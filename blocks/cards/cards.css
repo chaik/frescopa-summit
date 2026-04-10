@@ -54,8 +54,8 @@
 }
 
 .cards a.button {
-  background-color: var(--color-burnt-orange);
-  border-color: var(--color-burnt-orange);
+  background-color: #dc6e52;
+  border-color: #dc6e52;
   color: #fff;
   font-size: 13px;
   padding: 8px 24px;

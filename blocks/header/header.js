@@ -135,10 +135,13 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
-  if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
+  if (navBrand) {
+    const brandLink = navBrand.querySelector('.button');
+    if (brandLink) {
+      brandLink.className = '';
+      const wrapper = brandLink.closest('.button-wrapper') || brandLink.closest('.button-container');
+      if (wrapper) wrapper.className = '';
+    }
   }
 
   const navSections = nav.querySelector('.nav-sections');
@@ -168,8 +171,17 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
+  // Announcement bar
+  const announcementBar = document.createElement('div');
+  announcementBar.className = 'nav-announcement';
+  announcementBar.innerHTML = `<div class="nav-announcement-content">
+      <span>Free shipping from $35 &amp; Free coffee samples with code frescopa.</span>
+      <a href="/us/en">Shop now</a>
+    </div>`;
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
+  navWrapper.append(announcementBar);
   navWrapper.append(nav);
   block.append(navWrapper);
 }

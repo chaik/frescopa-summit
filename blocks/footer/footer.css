@@ -14,6 +14,12 @@ footer .footer {
 footer .footer p {
   margin: 0;
   line-height: 1.8;
+  font-size: 13px;
+}
+
+footer .footer strong {
+  color: var(--link-color);
+  font-size: 15px;
 }
 
 footer .footer img {

@@ -10,7 +10,13 @@
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
-  margin: 40px 0;
+  margin: 40px 24px;
+}
+
+@media (width >= 900px) {
+  .offer {
+    margin: 40px 32px;
+  }
 }
 
 .offer .offer-background {

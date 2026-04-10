@@ -9,8 +9,14 @@
   background-color: var(--color-cream);
   border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 32px;
+  margin: 0 24px 32px;
   position: relative;
+}
+
+@media (width >= 900px) {
+  .banner {
+    margin: 0 32px 32px;
+  }
 }
 
 .banner .banner-image {

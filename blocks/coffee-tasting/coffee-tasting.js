@@ -6,22 +6,22 @@ function getAvailability(zipCode) {
         zipCode,
         locations: [
           {
-            name: 'Frescopa Midtown',
-            address: '123 Main St, New York, NY 10001',
-            distance: '0.3 mi',
-            timeSlots: ['3:30 PM'],
+            name: 'Frescopa Flagship - Downtown',
+            address: '123 Main Street',
+            distance: '0.8 mi',
+            timeSlots: ['10:00 AM', '11:30 AM', '2:00 PM', '4:00 PM'],
           },
           {
-            name: 'Frescopa Gramercy',
-            address: '456 Park Ave S, New York, NY 10003',
+            name: 'Frescopa Roastery',
+            address: '456 Oak Avenue',
             distance: '1.2 mi',
-            timeSlots: ['4:00 PM'],
+            timeSlots: ['9:00 AM', '1:00 PM', '3:30 PM'],
           },
           {
-            name: 'Frescopa SoHo',
-            address: '789 Broadway, New York, NY 10012',
-            distance: '2.1 mi',
-            timeSlots: ['2:00 PM', '5:30 PM'],
+            name: 'Frescopa Express',
+            address: '789 Park Boulevard',
+            distance: '2.5 mi',
+            timeSlots: ['10:30 AM', '12:00 PM', '5:00 PM'],
           },
         ],
       });

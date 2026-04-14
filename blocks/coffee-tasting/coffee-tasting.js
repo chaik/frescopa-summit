@@ -6,22 +6,21 @@ function getAvailability(zipCode) {
         zipCode,
         locations: [
           {
-            name: 'Frescopa Flagship - Downtown',
-            address: '123 Main Street',
+            name: 'Frescopa Midtown',
+            address: '350 5th Ave, New York, NY 10001',
+            distance: '0.3 mi',
+            timeSlots: ['8:00 AM', '9:30 AM', '11:00 AM', '1:00 PM', '3:30 PM'],
+          },
+          {
+            name: 'Frescopa Chelsea',
+            address: '75 9th Ave, New York, NY 10011',
             distance: '0.8 mi',
-            timeSlots: ['10:00 AM', '11:30 AM', '2:00 PM', '4:00 PM'],
+            timeSlots: ['7:30 AM', '10:00 AM', '12:00 PM', '2:30 PM'],
           },
           {
-            name: 'Frescopa Roastery',
-            address: '456 Oak Avenue',
+            name: 'Frescopa Gramercy',
+            address: '200 Park Ave S, New York, NY 10003',
             distance: '1.2 mi',
-            timeSlots: ['9:00 AM', '1:00 PM', '3:30 PM'],
-          },
-          {
-            name: 'Frescopa Express',
-            address: '789 Park Boulevard',
-            distance: '2.5 mi',
-            timeSlots: ['10:30 AM', '12:00 PM', '5:00 PM'],
           },
         ],
       });

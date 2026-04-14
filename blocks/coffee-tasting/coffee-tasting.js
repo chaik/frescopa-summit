@@ -21,6 +21,7 @@ function getAvailability(zipCode) {
             name: 'Frescopa Gramercy',
             address: '200 Park Ave S, New York, NY 10003',
             distance: '1.2 mi',
+            timeSlots: ['8:30 AM', '10:30 AM', '1:30 PM', '4:00 PM'],
           },
         ],
       });
